@@ -1,4 +1,4 @@
-# 📘 LeetCode DSA Tracker (Topic-Wise)
+# 📘 DSA Tracker (Topic-Wise)
 
 This repository tracks my **LeetCode practice topic-wise** for structured learning, quick revision, and interview preparation.
 
