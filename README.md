@@ -88,10 +88,10 @@ This repository tracks my **LeetCode practice topic-wise** for structured learni
 | # | Question | Status |
 |---|----------|--------|
 | 1 | [Reverse a Linked List](https://leetcode.com/problems/reverse-linked-list) | ✅ |
-| 2 | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list) | |
-| 3 | [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list) | |
-| 4 | [Merge Two Sorted Linked List](https://leetcode.com/problems/merge-two-sorted-lists) | |
-| 5 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list) | |
+| 2 | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list) | ✅ |
+| 3 | [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list) | ✅ |
+| 4 | [Merge Two Sorted Linked List](https://leetcode.com/problems/merge-two-sorted-lists) | ✅ |
+| 5 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list) | ✅ |
 | 6 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists) | |
 | 7 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle) | |
 | 8 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list) | |
