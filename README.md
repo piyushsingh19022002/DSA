@@ -92,14 +92,14 @@ This repository tracks my **LeetCode practice topic-wise** for structured learni
 | 3 | [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list) | ✅ |
 | 4 | [Merge Two Sorted Linked List](https://leetcode.com/problems/merge-two-sorted-lists) | ✅ |
 | 5 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list) | ✅ |
-| 6 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists) | |
-| 7 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle) | |
-| 8 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list) | |
-| 9 | [Swapping Nodes in a Linked List](https://leetcode.com/problems/swapping-nodes-in-a-linked-list) | |
-| 10 | [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list) | |
-| 11 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list) | |
-| 12 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers) | |
-| 13 | [Swapping Nodes in a Linked List](https://leetcode.com/problems/swapping-nodes-in-a-linked-list) | |
+| 6 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists) | ✅ |
+| 7 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle) | ✅ |
+| 8 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list) | ✅ |
+| 9 | [Swapping Nodes in a Linked List](https://leetcode.com/problems/swapping-nodes-in-a-linked-list) | ✅ |
+| 10 | [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list) | ✅ |
+| 11 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list) | ✅ |
+| 12 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers) | ✅ |
+| 13 | [Swapping Nodes in a Linked List](https://leetcode.com/problems/swapping-nodes-in-a-linked-list) | ✅ |
 | 14 | [Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts) | |
 | 15 | [Insertion Sort List](https://leetcode.com/problems/insertion-sort-list) | |
 | 16 | [Merge Sort on List](https://leetcode.com/problems/sort-list) | |
