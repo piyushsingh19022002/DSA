@@ -34,15 +34,30 @@
 //         return ans;
 //     }
 // }
+// class Solution {
+//     public int levels(TreeNode root){
+//         if(root==null) return 0;
+//         return 1 + Math.max(levels(root.left),levels(root.right));
+//     }
+//     public boolean isBalanced(TreeNode root) {
+//         if(root==null) return true;
+//         int diff = Math.abs(levels(root.left)-levels(root.right));
+//         if(diff>1) return false;
+//         return isBalanced(root.left) && isBalanced(root.right);
+//     }
+// }
 class Solution {
-    public int levels(TreeNode root){
+    public int levels(TreeNode root,boolean[] ans){
         if(root==null) return 0;
-        return 1 + Math.max(levels(root.left),levels(root.right));
+        int rightLevel = levels(root.right,ans);
+        int leftLevel = levels(root.left,ans);
+        int diff = Math.abs(rightLevel-leftLevel);
+        if(diff>1) ans[0]=false;
+        return 1 + Math.max(rightLevel,leftLevel);
     }
     public boolean isBalanced(TreeNode root) {
-        if(root==null) return true;
-        int diff = Math.abs(levels(root.left)-levels(root.right));
-        if(diff>1) return false;
-        return isBalanced(root.left) && isBalanced(root.right);
+        boolean[] ans = {true};
+        levels(root,ans);
+        return ans[0];
     }
 }
