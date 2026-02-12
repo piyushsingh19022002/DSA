@@ -20,8 +20,10 @@ class Solution {
     }
     public void helper(TreeNode root,List<Integer> arr,int currLevel,int targetLevel){
         if(root==null) return;
-        if(currLevel>targetLevel) return; // agar mera currLevel cross kar jaye targetLevel ko to return
-        if(currLevel==targetLevel) arr.add(root.val);
+        if(currLevel==targetLevel){
+            arr.add(root.val);
+            return; // agar mera currLevel equal ho jaye targetLevel ko to return
+        }
         helper(root.left,arr,currLevel+1,targetLevel);
         helper(root.right,arr,currLevel+1,targetLevel);
     }
