@@ -33,19 +33,42 @@
 //         return isValidBST(root.left) && isValidBST(root.right);
 //     }
 // }
+// class Solution {
+//     public void inorder(TreeNode root,List<Integer> in){
+//         if(root==null) return;
+//         inorder(root.left,in);
+//         in.add(root.val);
+//         inorder(root.right,in);
+//     }
+//     public boolean isValidBST(TreeNode root) {
+//         List<Integer> in = new ArrayList<>();
+//         inorder(root,in);
+//         for(int i = 1;i < in.size();i++){
+//             if(in.get(i)<=in.get(i-1)) return false;
+//         }
+//         return true;
+//     }
+// }
 class Solution {
-    public void inorder(TreeNode root,List<Integer> in){
-        if(root==null) return;
-        inorder(root.left,in);
-        in.add(root.val);
-        inorder(root.right,in);
+    static boolean flag;
+    public long max(TreeNode root){
+        if(root==null) return Long.MIN_VALUE;
+        long left = max(root.left);
+        if(left>=root.val) flag = false;
+        long right = max(root.right);
+        return Math.max(root.val,Math.max(left,right));
+    }
+    public long min(TreeNode root){
+        if(root==null) return Long.MAX_VALUE;
+        long left = min(root.left);
+        long right = min(root.right);
+        if(right<=root.val) flag = false;
+        return Math.min(root.val,Math.min(left,right));
     }
     public boolean isValidBST(TreeNode root) {
-        List<Integer> in = new ArrayList<>();
-        inorder(root,in);
-        for(int i = 1;i < in.size();i++){
-            if(in.get(i)<=in.get(i-1)) return false;
-        }
-        return true;
+        flag = true;
+        max(root);
+        min(root);
+        return flag;
     }
 }
