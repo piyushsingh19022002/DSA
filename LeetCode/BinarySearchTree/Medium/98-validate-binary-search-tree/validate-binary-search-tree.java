@@ -34,12 +34,6 @@
 //     }
 // }
 class Solution {
-    public boolean isSorted(List<Integer> in){
-        for(int i = 1;i < in.size();i++){
-            if(in.get(i)<=in.get(i-1)) return false;
-        }
-        return true;
-    }
     public void inorder(TreeNode root,List<Integer> in){
         if(root==null) return;
         inorder(root.left,in);
@@ -49,6 +43,9 @@ class Solution {
     public boolean isValidBST(TreeNode root) {
         List<Integer> in = new ArrayList<>();
         inorder(root,in);
-        return isSorted(in);
+        for(int i = 1;i < in.size();i++){
+            if(in.get(i)<=in.get(i-1)) return false;
+        }
+        return true;
     }
 }
