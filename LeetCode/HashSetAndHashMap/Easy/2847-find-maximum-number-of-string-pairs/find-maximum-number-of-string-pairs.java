@@ -6,9 +6,9 @@ class Solution {
             StringBuilder sb = new StringBuilder(words[i]);
             if(set.contains(sb.reverse().toString())){
                 pairs++;
-                continue;
+                set.remove(sb.reverse().toString());
             }
-            set.add(words[i]);
+            else set.add(words[i]);
         }
         
         return pairs;
