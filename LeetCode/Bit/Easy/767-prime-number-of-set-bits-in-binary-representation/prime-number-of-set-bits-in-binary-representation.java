@@ -18,10 +18,7 @@ class Solution {
         int primes = 0;
         int[] setBits = new int[right-left+1];
         for(int i = left; i <=right;i++){
-            setBits[i-left] = countSetBits(i);
-        }
-        for(int i = 0 ; i < setBits.length;i++){
-            if(isPrime(setBits[i])) primes++;
+            if(isPrime(countSetBits(i))) primes++;
         }
         return primes;
     }
