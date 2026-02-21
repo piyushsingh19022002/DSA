@@ -32,7 +32,6 @@ class Solution {
     }
     public int countPrimeSetBits(int left, int right) {
         int primes = 0;
-        int[] setBits = new int[right-left+1];
         for(int i = left; i <=right;i++){
             if(isPrime(Integer.bitCount(i))) primes++;
         }
