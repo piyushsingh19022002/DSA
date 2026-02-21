@@ -20,6 +20,6 @@ class Solution {
             if(map.containsKey(remaining)) return new int[]{map.get(remaining),i};
             else map.put(nums[i],i);
         }
-        return new int[]{};
+        return new int[]{-1,-1};
     }
 }
