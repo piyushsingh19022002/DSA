@@ -35,9 +35,7 @@ class Solution {
         temp = head;
         newTemp = dummy.next;
         while(temp!=null && newTemp!=null){
-            if(map.containsKey(temp.random)){
-                newTemp.random = map.get(temp.random);
-            }
+            newTemp.random = map.get(temp.random);
             temp = temp.next;
             newTemp = newTemp.next;
         }
