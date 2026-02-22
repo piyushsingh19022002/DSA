@@ -15,16 +15,15 @@
 // }
 // DP Solu
 class Solution {
-    static int[] dp;
     public int fib(int n) {
-        dp = new int[n+1];
-        return helper(n);
+        int[] dp = new int[n+1];
+        return helper(n,dp);
     }
-    public int helper(int n){
+    public int helper(int n,int[] dp){
         if(n<=1) return n;
-        if(dp[n]!=0) return dp[n]; // check if we had ans or not
-        int ans = helper(n-1)+helper(n-2);
-        dp[n] = ans;
+        if(dp[n]!=0) return dp[n]; // check if we had ans return ans 
+        int ans = helper(n-1,dp)+helper(n-2,dp);
+        dp[n] = ans; // if not then calculate and store
         return ans;
     }
 }
