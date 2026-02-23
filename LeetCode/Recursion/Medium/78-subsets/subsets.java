@@ -4,10 +4,10 @@ class Solution {
             ans.add(new ArrayList<>(arr));
             return;
         }
-        helper(i+1,nums,arr,ans);
         arr.add(nums[i]);
         helper(i+1,nums,arr,ans);
         arr.remove(arr.size()-1);
+        helper(i+1,nums,arr,ans);
     }
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
