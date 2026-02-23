@@ -7,11 +7,11 @@ class Solution {
         while(j!=s.length()){
             String sub = s.substring(i,j);
             set.add(sub);
-            if(set.size()==1<<k) return true;
+            if(set.size()==1<<k) return true; // 1<<k == 2^k
             i++;
             j++;
         }
         set.add(s.substring(i));
-        return set.size()==(int)Math.pow(2,k);
+        return set.size()==1<<k;
     }
 }
