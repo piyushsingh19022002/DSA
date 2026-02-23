@@ -7,6 +7,7 @@ class Solution {
         while(j!=s.length()){
             String sub = s.substring(i,j);
             set.add(sub);
+            if(set.size()==1<<k) return true;
             i++;
             j++;
         }
