@@ -14,26 +14,22 @@
  * }
  */
 class Solution {
-    public void path(TreeNode root,String str,List<String> paths){
+    public void path(TreeNode root,String str,int[] sum){
         if(root==null){
            return;
         }
         if(root.left==null && root.right==null){
             str+=root.val;
-            paths.add(str);
+            sum[0]+=Integer.parseInt(str,2);
             return;
         }
-        path(root.left,str+root.val,paths);
-        path(root.right,str+root.val,paths);
+        path(root.left,str+root.val,sum);
+        path(root.right,str+root.val,sum);
     }
     public int sumRootToLeaf(TreeNode root) {
-        int sum = 0;
+        int[] sum = {0};
         List<String> paths = new ArrayList<>();
-        path(root,"",paths);
-        for(String s:paths){
-            int val = Integer.parseInt(s,2);
-            sum+=val;
-        } 
-        return sum;   
+        path(root,"",sum);
+        return sum[0];   
     }
 }
