@@ -28,7 +28,6 @@ class Solution {
     }
     public int sumRootToLeaf(TreeNode root) {
         int[] sum = {0};
-        List<String> paths = new ArrayList<>();
         path(root,"",sum);
         return sum[0];   
     }
