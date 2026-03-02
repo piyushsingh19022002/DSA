@@ -9,19 +9,15 @@ class Solution {
         int n = grid[0].length;
         int[] endZeros = new int[n];
         for(int i = 0; i < n; i++){
-    int zeroCount = 0;
-    boolean foundOne = false;
-
-    for(int j = n-1; j >= 0; j--){
-        if(grid[i][j] == 0) zeroCount++;
-        else{
-            foundOne = true;
-            break;
-        }
-    }
-
-    endZeros[i] = zeroCount; // works for both cases
-}
+            int zeroCount = 0;
+            for(int j = n-1; j >= 0; j--){
+                if(grid[i][j] == 0) zeroCount++;
+                else{
+                    break;
+                }
+            }
+            endZeros[i] = zeroCount; // works for both cases
+        }   
         for(int i = 0 ; i < n;i++){
             int zerosRequired = n - i - 1; // zeros required for current row
             if(endZeros[i]>=zerosRequired) continue;
