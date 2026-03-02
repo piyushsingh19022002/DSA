@@ -23,7 +23,7 @@
 //     }
 // }
 
-class Solution { // top - down
+class Solution { // bottom - up
     public int climbStairs(int n) {
         int[] dp = new int[n+2];
         dp[n+1] = 0;
