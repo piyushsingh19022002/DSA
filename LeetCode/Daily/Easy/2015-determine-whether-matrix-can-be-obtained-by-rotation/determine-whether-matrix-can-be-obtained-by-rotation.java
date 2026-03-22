@@ -1,21 +1,22 @@
 class Solution {
+    public void swap(int[][] mat ,int i,int j,int l,int m){
+        int temp  = mat[i][j];
+        mat[i][j] = mat[l][m];
+        mat[l][m] = temp;
+    }
     public void rotate(int[][] mat){
         int n = mat.length;
         // transpose first
         for(int i = 0 ; i < n ; i++){
             for(int j = i+1 ; j < n ; j++){
-                int temp  = mat[i][j];
-                mat[i][j] = mat[j][i];
-                mat[j][i] = temp;
+                swap(mat,i,j,j,i);
             }
         }
         // reverse each row
          for(int i = 0 ; i < n ; i++){
             int a = 0,b = n-1;
             while(a<b){
-                int temp = mat[i][a];
-                mat[i][a] = mat[i][b];
-                mat[i][b] = temp; 
+                swap(mat,i,a,i,b);
                 a++;
                 b--;
             }
