@@ -24,14 +24,14 @@ class Solution {
     }
 
     private boolean check(long[] arr, long total) {
-        long left = arr[0];
-        long right = total - left;
+        long uptoNow = arr[0];
+        long remaining = total - uptoNow;
 
         for (int i = 1; i < arr.length; i++) {
-            if (left == right) return true;
-            else if (left > right) return false;
-            left += arr[i];
-            right -= arr[i];
+            if (uptoNow == remaining) return true;
+            else if (uptoNow > remaining) return false;
+            uptoNow += arr[i];
+            remaining -= arr[i];
         }
 
         return false;
