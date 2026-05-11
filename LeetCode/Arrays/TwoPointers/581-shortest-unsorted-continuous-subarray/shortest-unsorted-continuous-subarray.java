@@ -36,36 +36,29 @@ class Solution {
     public int findUnsortedSubarray(int[] nums) {
         int n = nums.length;
         int min = Integer.MAX_VALUE;
+        int st = -1;
         int max = Integer.MIN_VALUE;
-        boolean broken = false;
+        int end = -1;
 
-        // 1. Sabse pehle "kharab" section ka Global Min dhundho
-        for (int i = 0; i < n - 1; i++) {
-            if (nums[i] > nums[i + 1]) broken = true;
-            if (broken) min = Math.min(min, nums[i + 1]);
+        // finding the smallest element which is unsorted
+        for(int i = 1 ; i < n; i++){
+            if(nums[i]<nums[i-1] && st==-1){
+                min = nums[i];
+                st = i;
+            }
+            if(st!=-1) min = Math.min(min,nums[i]);
         }
-
-        if (!broken) return 0; // Array sorted hai
-
-        // 2. Peeche se scan karke Global Max dhundho
-        broken = false;
-        for (int i = n - 1; i > 0; i--) {
-            if (nums[i] < nums[i - 1]) broken = true;
-            if (broken) max = Math.max(max, nums[i - 1]);
+        if(st==-1) return 0;
+        for(int j = n-2 ; j >=0 ;j--){
+            if(nums[j]>nums[j+1] && end==-1){
+                max = nums[j];
+                end = j;
+            }
+            if(end!=-1) max = Math.max(max,nums[j]);
         }
-
-        // 3. Min ke liye sahi jagah: Pehla index jahan value 'min' se badi hai
-        int start = 0;
-        while (start < n && nums[start] <= min) {
-            start++;
-        }
-
-        // 4. Max ke liye sahi jagah: Peeche se pehla index jahan value 'max' se choti hai
-        int end = n - 1;
-        while (end >= 0 && nums[end] >= max) {
-            end--;
-        }
-
-        return end - start + 1;
+        st = 0 ;end = n-1;
+        while(st<n && nums[st]<=min) st++;
+        while(end>=0 && nums[end]>=max) end--;
+        return end-st+1;
     }
 }
