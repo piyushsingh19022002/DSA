@@ -21,7 +21,7 @@
 
 
 
-class Solution { // Optimal Answer
+class Solution { // Optimal Approach
     public int threeSumClosest(int[] nums, int target) {
         int n = nums.length;
         int diff = Integer.MAX_VALUE;
