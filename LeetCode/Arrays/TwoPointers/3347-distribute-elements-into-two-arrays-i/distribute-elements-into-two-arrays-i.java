@@ -3,6 +3,7 @@ class Solution {
         int n = nums.length;
         List<Integer> arr1 = new ArrayList<>();
         List<Integer> arr2 = new ArrayList<>();
+        int[] ans = new int[n];
         arr1.add(nums[0]);
         arr2.add(nums[1]);
 
@@ -14,9 +15,14 @@ class Solution {
             else arr2.add(nums[i]);
         }
 
-        List<Integer> merged = new ArrayList<>(arr1);
-        merged.addAll(arr2);
+        int track = 0;
+        for(int i = 0 ; i < arr1.size() ; i++){
+            ans[track++] = arr1.get(i);
+        }
+        for(int i = 0 ; i < arr2.size() ; i++){
+            ans[track++] = arr2.get(i);
+        }
 
-        return merged.stream().mapToInt(Integer::intValue).toArray();
+        return ans;
     }
 }
