@@ -1,45 +1,25 @@
-// class Solution {
-//     public void sortColors(int[] nums) {
-//         int low = 0, mid = 0, high = nums.length - 1;
-
-//         while (mid <= high) {
-//             if (nums[mid] == 0) {
-//                 // swap(nums, low, mid);
-//                 int temp = nums[low];
-//                 nums[low] = nums[mid];
-//                 nums[mid] = temp;
-//                 low++;
-//                 mid++;
-//             } else if (nums[mid] == 1) {
-//                 mid++;
-//             } else { // nums[mid] == 2
-//                      // swap(nums, mid, high);
-//                 int temp = nums[mid];
-//                 nums[mid] = nums[high];
-//                 nums[high] = temp;
-//                 high--;
-//             }
-//         }
-//     }
-
-//     private void swap(int[] nums, int i, int j) {
-//         int temp = nums[i];
-//         nums[i] = nums[j];
-//         nums[j] = temp;
-//     }
-// }
-
 class Solution {
+    public void swap(int[] arr , int i , int j){
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
     public void sortColors(int[] nums) {
         int n = nums.length;
+        int low = 0;
+        int mid = 0;
+        int high = n - 1;
 
-        for(int i = 0; i < n-1; i++){
-            for(int j = 0 ; j < n-i-1 ; j++){
-                if(nums[j]>nums[j+1]){
-                    int temp = nums[j];
-                    nums[j] = nums[j+1];
-                    nums[j+1] = temp;
-                }
+        while(mid<=high){
+            if(nums[mid] == 0){
+                swap(nums,mid,low);
+                low++;
+                mid++;
+            }else if(nums[mid] == 1){
+                mid++;
+            }else{
+                swap(nums,mid,high);
+                high--;
             }
         }
     }
